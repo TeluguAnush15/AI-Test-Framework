@@ -7,6 +7,8 @@ import io.qameta.allure.*;
 
 import java.time.Duration;
 
+//PUBLIC
+
 public class OrangeAdminPage {
     WebDriver driver;
 

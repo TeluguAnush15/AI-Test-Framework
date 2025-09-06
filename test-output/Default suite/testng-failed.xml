@@ -3,13 +3,20 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.JPetStoreTest">
+      <class name="tests.FlipkartTest">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="jpetStoreScenario"/>
+          <include name="shoppingScenario"/>
         </methods>
-      </class> <!-- tests.JPetStoreTest -->
+      </class> <!-- tests.FlipkartTest -->
+      <class name="tests.OrangeHRMTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testSearchInAdminPage"/>
+        </methods>
+      </class> <!-- tests.OrangeHRMTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
