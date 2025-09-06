@@ -31,7 +31,7 @@ public class FlipkartCartPage {
     }
 
     
-    //public
+   
 //    public void removeFromCart() {
 //        driver.findElement(removeButton).click();
 //        driver.findElement(confirmRemoveButton).click();
