@@ -3,6 +3,13 @@
 <suite name="Failed suite [FlipkartSuite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="ShoppingFlowTest(failed)">
     <classes>
+      <class name="tests.OrangeHRMTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testSearchInAdminPage"/>
+        </methods>
+      </class> <!-- tests.OrangeHRMTest -->
       <class name="tests.FlipkartTest">
         <methods>
           <include name="setUp"/>
