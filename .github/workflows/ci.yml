@@ -1,4 +1,4 @@
-name: Run Tests & Allure Report
+name: Java CI with Allure Report
 
 on:
   push:
