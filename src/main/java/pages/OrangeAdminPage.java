@@ -10,7 +10,7 @@ import java.time.Duration;
 public class OrangeAdminPage {
     WebDriver driver;
 
-    By adminTab = By.xpath("//span[text()='Admin']");
+  //  By adminTab = By.xpath("//span[text()='Admin']");
     By usernameField = By.xpath("//label[text()='Username']/following::input[1]");
     By userRoleDropdown = By.xpath("//label[text()='User Role']/following::div[contains(@class,'oxd-select-text')]");
     By userRoleOption = By.xpath("//div[@role='listbox']//span[text()='ESS']"); // or 'Admin'
@@ -21,8 +21,9 @@ public class OrangeAdminPage {
     }
 
     public void goToAdminPage() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(adminTab)).click();
+    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Admin']"))).click();
+
     }
 
     public void searchUser(String username, String role) {
