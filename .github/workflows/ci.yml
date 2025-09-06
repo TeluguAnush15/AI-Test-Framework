@@ -19,8 +19,8 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Build and run tests (generate Allure results)
-        run: mvn clean test
+      - name: Build and run tests using testng.xml
+        run: mvn clean test -DsuiteXmlFile=testng.xml
 
       - name: Install Allure CLI
         run: |
