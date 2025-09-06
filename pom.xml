@@ -36,9 +36,10 @@
         <groupId>org.testng</groupId>
         <artifactId>testng</artifactId>
         <version>7.10.0</version>
-        <scope>test</scope>
+        <scope>compile</scope>
     </dependency>
-    
+
+   
     
      <!-- JUnit -->
     <dependency>
@@ -84,7 +85,32 @@
      
        <!-- Allure Report Plugin -->
   <build>
+  
         <plugins>
+          <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-compiler-plugin</artifactId>
+      <version>3.11.0</version>
+      <configuration>
+        <source>17</source>
+        <target>17</target>
+      </configuration>
+    </plugin>
+    
+      <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.0.0-M7</version> <!-- Or latest -->
+            <configuration>
+                <testSourceDirectory>${project.basedir}/src/main/java</testSourceDirectory>
+                <includes>
+                    <include>**/*Test.java</include>
+                </includes>
+            </configuration>
+        </plugin>
+        
+
+    
             <plugin>
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>
