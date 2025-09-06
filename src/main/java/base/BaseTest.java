@@ -12,7 +12,7 @@ public class BaseTest {
         driver = WebDriverFactory.createDriver();   // ✅ use factory now
         driver.manage().window().maximize();
     }
-
+ // Trigger CI workflow test
     @AfterMethod
     public void tearDown() {
         if (driver != null) {
