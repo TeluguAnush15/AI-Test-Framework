@@ -1,5 +1,5 @@
 "BROKEN","EPIC","FAILED","FEATURE","PASSED","SKIPPED","STORY","UNKNOWN"
-"0","Sanity Check Module","0","Browser Launch Test","1","0","Open browser and load Google homepage","0"
 "7","","0","","0","0","","0"
-"0","OrangeHRM Module","0","Admin Panel - User Search","1","0","Search user by name and role","0"
+"0","Sanity Check Module","0","Browser Launch Test","1","0","Open browser and load Google homepage","0"
 "1","E-Commerce Module","0","Flipkart Shopping Flow","0","0","Search and buy product on Flipkart","0"
+"1","OrangeHRM Module","0","Admin Panel - User Search","0","0","Search user by name and role","0"
