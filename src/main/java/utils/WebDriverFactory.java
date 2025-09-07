@@ -21,8 +21,10 @@ public class WebDriverFactory {
     }
 
     public static void removeDriver() {
-        driver.get().quit();  // Quit the WebDriver session
-        driver.remove();  // Remove the WebDriver instance from ThreadLocal
+        if (driver.get() != null) {
+            driver.get().quit();  // Quit the WebDriver session
+            driver.remove();      // Remove the WebDriver instance from ThreadLocal
+        }
     }
 
     // Method to create WebDriver (either local or cloud)
@@ -44,31 +46,40 @@ public class WebDriverFactory {
         try {
             // If running in cloud (like BrowserStack or LambdaTest)
             if (executionEnv.equalsIgnoreCase("cloud")) {
-                // Fetch cloud credentials (BrowserStack username and access key from environment variables)
+
+                // Fetch credentials from environment variable, fallback to system property
                 String username = System.getenv("BROWSERSTACK_USERNAME");
+                if (username == null) {
+                    username = System.getProperty("BROWSERSTACK_USERNAME");
+                }
+
                 String accessKey = System.getenv("BROWSERSTACK_ACCESS_KEY");
-                
+                if (accessKey == null) {
+                    accessKey = System.getProperty("BROWSERSTACK_ACCESS_KEY");
+                }
+
                 if (username == null || accessKey == null) {
-                    throw new RuntimeException("Cloud credentials not found! Ensure environment variables are set.");
+                    throw new RuntimeException("Cloud credentials not found! Set them as environment variables or system properties.");
                 }
 
                 // Construct the URL for cloud service (BrowserStack, LambdaTest, etc.)
-                String hubURL = "https://" + username + ":" + accessKey + "@hub.browserstack.com/wd/hub";  // Modify for other cloud services if needed
+                String hubURL = "https://" + username + ":" + accessKey + "@hub.browserstack.com/wd/hub";  // Modify for other services if needed
 
-                // Initialize RemoteWebDriver for BrowserStack (or other cloud service)
+                // Initialize RemoteWebDriver
                 driver.set(new RemoteWebDriver(new URL(hubURL), options));
-                System.out.println("BROWSERSTACK_USERNAME: " + System.getenv("BROWSERSTACK_USERNAME"));
-                System.out.println("BROWSERSTACK_ACCESS_KEY: " + System.getenv("BROWSERSTACK_ACCESS_KEY"));
+                System.out.println("BROWSERSTACK_USERNAME: " + username);
+                System.out.println("BROWSERSTACK_ACCESS_KEY: " + accessKey);
                 System.out.println(">>> Running on cloud (BrowserStack or other cloud service)");
 
             } else {
-                // If running locally, use WebDriverManager to set up ChromeDriver
+                // If running locally
                 WebDriverManager.chromedriver().setup();
                 driver.set(new ChromeDriver(options));
                 System.out.println(">>> Running locally");
             }
+
         } catch (Exception e) {
-            throw new RuntimeException("Failed to create WebDriver: " + e.getMessage());
+            throw new RuntimeException("Failed to create WebDriver: " + e.getMessage(), e);
         }
     }
 }

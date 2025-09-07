@@ -1,45 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-07T18:10:16 IST" name="ParallelTestSuite" finished-at="2025-09-07T18:10:49 IST" duration-ms="32680">
+  <suite started-at="2025-09-07T18:43:16 IST" name="Surefire suite" finished-at="2025-09-07T18:43:16 IST" duration-ms="142">
     <groups>
     </groups>
-    <test started-at="2025-09-07T18:10:16 IST" name="ShoppingFlowTest" finished-at="2025-09-07T18:10:49 IST" duration-ms="32680">
-      <class name="tests.AmazonTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AmazonTest@66982506]" started-at="2025-09-07T18:10:16 IST" name="setUp" finished-at="2025-09-07T18:10:20 IST" duration-ms="3819" status="PASS">
+    <test started-at="2025-09-07T18:43:16 IST" name="Surefire test" finished-at="2025-09-07T18:43:16 IST" duration-ms="142">
+      <class name="AutomationProject.SampleTest">
+        <test-method signature="testLogin()[pri:0, instance:AutomationProject.SampleTest@5d7148e2]" started-at="2025-09-07T18:43:16 IST" name="testLogin" finished-at="2025-09-07T18:43:16 IST" duration-ms="54" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="openAmazonAndClickItem()[pri:0, instance:tests.AmazonTest@66982506]" started-at="2025-09-07T18:10:20 IST" name="openAmazonAndClickItem" description="Open Amazon, search a product, click first item" finished-at="2025-09-07T18:10:49 IST" duration-ms="28541" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openAmazonAndClickItem -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AmazonTest@66982506]" started-at="2025-09-07T18:10:49 IST" name="tearDown" finished-at="2025-09-07T18:10:49 IST" duration-ms="239" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- tests.AmazonTest -->
-      <class name="tests.LaunchTest">
-        <test-method signature="openGoogle()[pri:0, instance:tests.LaunchTest@14028087]" started-at="2025-09-07T18:10:16 IST" name="openGoogle" finished-at="2025-09-07T18:10:26 IST" duration-ms="9971" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openGoogle -->
-      </class> <!-- tests.LaunchTest -->
-      <class name="tests.OrangeHRMTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.OrangeHRMTest@5890e879]" started-at="2025-09-07T18:10:16 IST" name="setUp" finished-at="2025-09-07T18:10:20 IST" duration-ms="3624" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testSearchInAdminPage()[pri:0, instance:tests.OrangeHRMTest@5890e879]" started-at="2025-09-07T18:10:20 IST" name="testSearchInAdminPage" finished-at="2025-09-07T18:10:38 IST" duration-ms="18303" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSearchInAdminPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.OrangeHRMTest@5890e879]" started-at="2025-09-07T18:10:38 IST" name="tearDown" finished-at="2025-09-07T18:10:39 IST" duration-ms="221" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- tests.OrangeHRMTest -->
-    </test> <!-- ShoppingFlowTest -->
-  </suite> <!-- ParallelTestSuite -->
+        </test-method> <!-- testLogin -->
+      </class> <!-- AutomationProject.SampleTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
 </testng-results>
