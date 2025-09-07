@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-FlipkartSuite" class="navigator-link">
-              <span class="suite-name border-failed">FlipkartSuite</span>
+              <span class="suite-name border-passed">FlipkartSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,26 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-FlipkartSuite" class="hide-methods failed suite-FlipkartSuite"> (hide)</a> <!-- hide-methods failed suite-FlipkartSuite -->
-                      <a href="#" panel-name="suite-FlipkartSuite" class="show-methods failed suite-FlipkartSuite"> (show)</a> <!-- show-methods failed suite-FlipkartSuite -->
-                    </span>
-                    <div class="method-list-content failed suite-FlipkartSuite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-FlipkartSuite" title="tests.FlipkartTest" class="method navigator-link" hash-for-method="shoppingScenario">shoppingScenario</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-FlipkartSuite" title="tests.OrangeHRMTest" class="method navigator-link" hash-for-method="testSearchInAdminPage">testSearchInAdminPage</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-FlipkartSuite -->
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -122,7 +103,17 @@
                     <div class="method-list-content passed suite-FlipkartSuite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-FlipkartSuite" title="tests.AmazonTest" class="method navigator-link" hash-for-method="openAmazonAndClickItem">openAmazonAndClickItem</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-FlipkartSuite" title="tests.LaunchTest" class="method navigator-link" hash-for-method="openGoogle">openGoogle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-FlipkartSuite" title="tests.OrangeHRMTest" class="method navigator-link" hash-for-method="testSearchInAdminPage">testSearchInAdminPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-FlipkartSuite -->
@@ -137,72 +128,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-FlipkartSuite" class="panel FlipkartSuite">
-          <div class="suite-FlipkartSuite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">tests.FlipkartTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="shoppingScenario">
-                  </a> <!-- shoppingScenario -->
-                  <span class="method-name">shoppingScenario</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (119, 488)
-  (Session info: chrome=139.0.7258.139)
-Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1fe62573518c5c9cce5d7f865c5edfc1, clickElement {id=f.F1C611720CB3AB0CFB3C3587204DAF2B.d.656F4DD7DD827D9AC83001610FAAD609.e.59}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.139, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\kiran\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63720}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63720/devtoo..., se:cdpVersion: 139.0.7258.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (1fe62573518c5c9cce5d7f865c5edfc1)] -&gt; xpath: //button[text()=&apos;Add to cart&apos;]]
-Session ID: 1fe62573518c5c9cce5d7f865c5edfc1
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at pages.FlipkartCartPage.addToCart(FlipkartCartPage.java:30)
-	at tests.FlipkartTest.shoppingScenario(FlipkartTest.java:46)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 32 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-FlipkartSuite-class-failed -->
-          <div class="suite-FlipkartSuite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">tests.OrangeHRMTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testSearchInAdminPage">
-                  </a> <!-- testSearchInAdminPage -->
-                  <span class="method-name">testSearchInAdminPage</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //span[text()=&apos;Admin&apos;] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.139, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\kiran\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60490}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60490/devtoo..., se:cdpVersion: 139.0.7258.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a5db8c0aad4c9a6a144eddf7e4cc980c
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.OrangeAdminPage.goToAdminPage(OrangeAdminPage.java:25)
-	at tests.OrangeHRMTest.testSearchInAdminPage(OrangeHRMTest.java:29)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 29 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-FlipkartSuite-class-failed -->
           <div class="suite-FlipkartSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -214,6 +139,38 @@ Session ID: a5db8c0aad4c9a6a144eddf7e4cc980c
                   <a name="openGoogle">
                   </a> <!-- openGoogle -->
                   <span class="method-name">openGoogle</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-FlipkartSuite-class-passed -->
+          <div class="suite-FlipkartSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.AmazonTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="openAmazonAndClickItem">
+                  </a> <!-- openAmazonAndClickItem -->
+                  <span class="method-name">openAmazonAndClickItem</span>
+                  <em>
+(Open Amazon, search a product, click first item)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-FlipkartSuite-class-passed -->
+          <div class="suite-FlipkartSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.OrangeHRMTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSearchInAdminPage">
+                  </a> <!-- testSearchInAdminPage -->
+                  <span class="method-name">testSearchInAdminPage</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -230,9 +187,9 @@ Session ID: a5db8c0aad4c9a6a144eddf7e4cc980c
 &lt;suite name=&quot;FlipkartSuite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;ShoppingFlowTest&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;tests.FlipkartTest&quot;/&gt;
       &lt;class name=&quot;tests.LaunchTest&quot;/&gt;
       &lt;class name=&quot;tests.OrangeHRMTest&quot;/&gt;
+      &lt;class name=&quot;tests.AmazonTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- ShoppingFlowTest --&gt;
 &lt;/suite&gt; &lt;!-- FlipkartSuite --&gt;
@@ -276,20 +233,20 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testSearchInAdminPage')
 data.setCell(0, 2, 'tests.OrangeHRMTest')
-data.setCell(0, 3, 23400);
+data.setCell(0, 3, 24540);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'shoppingScenario')
-data.setCell(1, 2, 'tests.FlipkartTest')
-data.setCell(1, 3, 21793);
+data.setCell(1, 1, 'openAmazonAndClickItem')
+data.setCell(1, 2, 'tests.AmazonTest')
+data.setCell(1, 3, 7057);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'openGoogle')
 data.setCell(2, 2, 'tests.LaunchTest')
-data.setCell(2, 3, 2317);
+data.setCell(2, 3, 4171);
 window.suiteTableData['FlipkartSuite']= { tableData: data, tableDiv: 'times-div-FlipkartSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 47 seconds</span>
+              <span class="suite-total-time">Total running time: 35 seconds</span>
               <div id="times-div-FlipkartSuite">
               </div> <!-- times-div-FlipkartSuite -->
             </div> <!-- times-div -->
@@ -315,44 +272,40 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.FlipkartTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">shoppingScenario</span>
-                <span class="method-start">1806 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">23617 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
               <div class="chronological-class-name">tests.LaunchTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">openGoogle</span>
-                <span class="method-start">23843 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.OrangeHRMTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">26164 ms</span>
+                <span class="method-start">4250 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">testSearchInAdminPage</span>
-                <span class="method-start">26996 ms</span>
+                <span class="method-start">5674 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">50402 ms</span>
+                <span class="method-start">30218 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.AmazonTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">30501 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">openAmazonAndClickItem</span>
+                <span class="method-start">31571 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">38636 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

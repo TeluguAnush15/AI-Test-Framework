@@ -10,13 +10,6 @@
           <include name="testSearchInAdminPage"/>
         </methods>
       </class> <!-- tests.OrangeHRMTest -->
-      <class name="tests.FlipkartTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="shoppingScenario"/>
-        </methods>
-      </class> <!-- tests.FlipkartTest -->
     </classes>
   </test> <!-- ShoppingFlowTest(failed) -->
 </suite> <!-- Failed suite [FlipkartSuite] -->

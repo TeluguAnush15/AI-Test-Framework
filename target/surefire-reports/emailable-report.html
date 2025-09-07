@@ -9,44 +9,12 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">FlipkartSuite</th></tr>
-<tr><td><a href="#t0">ShoppingFlowTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">50,671</td><td></td><td></td></tr>
+<tr><td><a href="#t0">ShoppingFlowTest</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">39,044</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">FlipkartSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ShoppingFlowTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.FlipkartTest</td><td><a href="#m0">shoppingScenario</a></td><td rowspan="1">1757180452619</td><td rowspan="1">21793</td></tr><tr class="failedodd"><td rowspan="1">tests.OrangeHRMTest</td><td><a href="#m1">testSearchInAdminPage</a></td><td rowspan="1">1757180477809</td><td rowspan="1">23400</td></tr><tr><th colspan="4">ShoppingFlowTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.LaunchTest</td><td><a href="#m2">openGoogle</a></td><td rowspan="1">1757180474656</td><td rowspan="1">2317</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">FlipkartSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ShoppingFlowTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.AmazonTest</td><td><a href="#m0">openAmazonAndClickItem</a></td><td rowspan="1">1757229395319</td><td rowspan="1">7057</td></tr><tr class="passedodd"><td rowspan="1">tests.LaunchTest</td><td><a href="#m1">openGoogle</a></td><td rowspan="1">1757229363748</td><td rowspan="1">4171</td></tr><tr class="passedeven"><td rowspan="1">tests.OrangeHRMTest</td><td><a href="#m2">testSearchInAdminPage</a></td><td rowspan="1">1757229369422</td><td rowspan="1">24540</td></tr></tbody>
 </table>
-<h2>ShoppingFlowTest</h2><h3 id="m0">tests.FlipkartTest#shoppingScenario</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (119, 488)
-  (Session info: chrome=139.0.7258.139)
-Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1fe62573518c5c9cce5d7f865c5edfc1, clickElement {id=f.F1C611720CB3AB0CFB3C3587204DAF2B.d.656F4DD7DD827D9AC83001610FAAD609.e.59}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.139, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\kiran\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63720}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63720/devtoo..., se:cdpVersion: 139.0.7258.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (1fe62573518c5c9cce5d7f865c5edfc1)] -&gt; xpath: //button[text()=&apos;Add to cart&apos;]]
-Session ID: 1fe62573518c5c9cce5d7f865c5edfc1
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at pages.FlipkartCartPage.addToCart(FlipkartCartPage.java:30)
-	at tests.FlipkartTest.shoppingScenario(FlipkartTest.java:46)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.OrangeHRMTest#testSearchInAdminPage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //span[text()=&apos;Admin&apos;] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.139, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\kiran\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60490}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60490/devtoo..., se:cdpVersion: 139.0.7258.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a5db8c0aad4c9a6a144eddf7e4cc980c
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.OrangeAdminPage.goToAdminPage(OrangeAdminPage.java:25)
-	at tests.OrangeHRMTest.testSearchInAdminPage(OrangeHRMTest.java:29)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.LaunchTest#openGoogle</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>ShoppingFlowTest</h2><h3 id="m0">tests.AmazonTest#openAmazonAndClickItem</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.LaunchTest#openGoogle</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.OrangeHRMTest#testSearchInAdminPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

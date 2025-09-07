@@ -3,7 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.*;
-import io.qameta.allure.*;
+//import io.qameta.allure.*;
 
 import java.time.Duration;
 
@@ -12,7 +12,7 @@ import java.time.Duration;
 public class OrangeAdminPage {
     WebDriver driver;
 
-  //  By adminTab = By.xpath("//span[text()='Admin']");
+   By adminTab = By.xpath("//span[text()='Admin']");
     By usernameField = By.xpath("//label[text()='Username']/following::input[1]");
     By userRoleDropdown = By.xpath("//label[text()='User Role']/following::div[contains(@class,'oxd-select-text')]");
     By userRoleOption = By.xpath("//div[@role='listbox']//span[text()='ESS']"); // or 'Admin'
@@ -20,10 +20,11 @@ public class OrangeAdminPage {
 
     public OrangeAdminPage(WebDriver driver) {
         this.driver = driver;
+
     }
 
     public void goToAdminPage() {
-    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Admin']"))).click();
 
     }
