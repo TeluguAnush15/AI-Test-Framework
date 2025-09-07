@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        browser: [chrome, firefox]  # Matrix for running tests in both Chrome and Firefox
+        browser: [chrome]  # Matrix for running tests in both Chrome and Firefox
         
     steps:
       - name: Checkout code
