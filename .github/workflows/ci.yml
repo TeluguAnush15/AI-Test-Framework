@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        browser: [chrome]  # Matrix for running tests in both Chrome and Firefox
+        browser: [chrome, firefox]  # Matrix for running tests in both Chrome and Firefox
         
     steps:
       - name: Checkout code
@@ -26,11 +26,25 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
-
-      - name: Run tests
+      - name: Install browsers
         run: |
-          echo "Running on cloud..."
-          mvn clean test -Denv=cloud -DBROWSERSTACK_USERNAME=${{ secrets.BROWSERSTACK_USERNAME }}
+          sudo apt-get update -y
+          if [ "${{ matrix.browser }}" = "chrome" ]; then
+            sudo apt-get install -y wget gnupg2
+            wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+            echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
+            sudo apt-get update -y
+            sudo apt-get install -y google-chrome-stable
+          else
+            sudo apt-get install -y firefox
+          fi
+          
+      - name: Run tests (matrix)
+        env:
+          ALLURE_RESULTS_DIR: target/allure-results-${{ matrix.browser }}
+        run: |
+          echo "Running tests on browser=${{ matrix.browser }}"
+          mvn -B -DskipTests=false -Dbrowser=${{ matrix.browser }} -Dallure.results.directory=${ALLURE_RESULTS_DIR} test
 
       - name: Install Allure CLI
         run: |
@@ -39,6 +53,28 @@ jobs:
           sudo mv allure-2.27.0 /opt/allure
           sudo ln -s /opt/allure/bin/allure /usr/bin/allure
           allure --version
+
+  merge-and-report:
+     runs-on: ubuntu-latest
+     needs: test
+     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download all matrix results
+        uses: actions/download-artifact@v4
+        with:
+          path: ./all-results
+
+      - name: Merge all results into single directory
+        run: |
+          mkdir -p target/allure-results
+          for d in all-results/*; do
+            if [ -d "$d" ]; then
+              cp -r "$d"/* target/allure-results/ || true
+            fi
+          done
+          ls -la target/allure-results
 
       - name: Generate Allure HTML report
         run: |
