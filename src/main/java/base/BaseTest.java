@@ -1,22 +1,22 @@
 package base;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import utils.WebDriverFactory;
 
 public class BaseTest {
+
     protected WebDriver driver;
 
     @BeforeMethod
     public void setUp() {
-        driver = WebDriverFactory.createDriver();   // ✅ use factory now
-        driver.manage().window().maximize();
+        WebDriverFactory.createDriver();
+        driver = WebDriverFactory.getDriver();
     }
- // Trigger CI workflow test
+
     @AfterMethod
     public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
+        WebDriverFactory.removeDriver();
     }
 }

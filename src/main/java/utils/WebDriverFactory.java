@@ -1,22 +1,30 @@
 package utils;
-
 import java.net.URL;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class WebDriverFactory {
 
-    public static WebDriver createDriver() {
-        WebDriver driver = null;
-        
-        //public
+    private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-        String executionEnv = System.getProperty("env", "local"); // "local" or "cloud"
+    public static WebDriver getDriver() {
+        return driver.get();
+    }
+
+    public static void setDriver(WebDriver driverInstance) {
+        driver.set(driverInstance);
+    }
+
+    public static void removeDriver() {
+        driver.get().quit();
+        driver.remove();
+    }
+
+    public static void createDriver() {
+        String executionEnv = System.getProperty("env", "local");
         System.out.println(">>> Environment: " + executionEnv);
 
         ChromeOptions options = new ChromeOptions();
@@ -32,21 +40,17 @@ public class WebDriverFactory {
 
         try {
             if (executionEnv.equalsIgnoreCase("cloud")) {
-                // Replace with your actual cloud hub URL (e.g., BrowserStack, LambdaTest)
+                // Replace with your actual cloud hub URL (e.g. BrowserStack / LambdaTest)
                 String hubURL = "https://<username>:<access_key>@hub.browserstack.com/wd/hub";
-
-                driver = new RemoteWebDriver(new URL(hubURL), options);
+                driver.set(new RemoteWebDriver(new URL(hubURL), options));
                 System.out.println(">>> Running on cloud");
             } else {
                 WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver(options);
+                driver.set(new ChromeDriver(options));
                 System.out.println(">>> Running locally");
             }
         } catch (Exception e) {
-            System.err.println("❌ Error initializing WebDriver: " + e.getMessage());
-            e.printStackTrace();
+            throw new RuntimeException("Failed to create WebDriver: " + e.getMessage());
         }
-
-        return driver;
     }
 }

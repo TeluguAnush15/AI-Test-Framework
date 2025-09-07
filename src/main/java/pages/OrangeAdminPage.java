@@ -2,39 +2,43 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.*;
-//import io.qameta.allure.*;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.time.Duration;
-
-//PUBLIC
+import io.qameta.allure.Step;
 
 public class OrangeAdminPage {
-    WebDriver driver;
+    private WebDriver driver;
 
-   By adminTab = By.xpath("//span[text()='Admin']");
-    By usernameField = By.xpath("//label[text()='Username']/following::input[1]");
-    By userRoleDropdown = By.xpath("//label[text()='User Role']/following::div[contains(@class,'oxd-select-text')]");
-    By userRoleOption = By.xpath("//div[@role='listbox']//span[text()='ESS']"); // or 'Admin'
-    By searchBtn = By.xpath("//button[@type='submit']");
+    private By adminTab = By.xpath("//span[text()='Admin']");
+    private By usernameField = By.xpath("//label[text()='Username']/following::input[1]");
+    private By userRoleDropdown = By.xpath("//label[text()='User Role']/following::div[contains(@class,'oxd-select-text')]");
+    private By searchBtn = By.xpath("//button[@type='submit']");
 
     public OrangeAdminPage(WebDriver driver) {
         this.driver = driver;
-
     }
 
+    @Step("Navigating to Admin Page")
     public void goToAdminPage() {
-    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-    	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Admin']"))).click();
-
+        new WebDriverWait(driver, Duration.ofSeconds(15))
+            .until(ExpectedConditions.elementToBeClickable(adminTab))
+            .click();
     }
 
+    @Step("Searching for user with username: {0} and role: {1}")
     public void searchUser(String username, String role) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(usernameField)).sendKeys(username);
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(usernameField))
+            .sendKeys(username);
 
         driver.findElement(userRoleDropdown).click();
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@role='listbox']//span[text()='" + role + "']"))).click();
+
+        // Use dynamic XPath for role
+        By roleOption = By.xpath("//div[@role='listbox']//span[text()='" + role + "']");
+        wait.until(ExpectedConditions.elementToBeClickable(roleOption)).click();
 
         driver.findElement(searchBtn).click();
     }
