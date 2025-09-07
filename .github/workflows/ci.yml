@@ -54,28 +54,6 @@ jobs:
           sudo ln -s /opt/allure/bin/allure /usr/bin/allure
           allure --version
 
-  merge-and-report:
-     runs-on: ubuntu-latest
-     needs: test
-     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Download all matrix results
-        uses: actions/download-artifact@v4
-        with:
-          path: ./all-results
-
-      - name: Merge all results into single directory
-        run: |
-          mkdir -p target/allure-results
-          for d in all-results/*; do
-            if [ -d "$d" ]; then
-              cp -r "$d"/* target/allure-results/ || true
-            fi
-          done
-          ls -la target/allure-results
-
       - name: Generate Allure HTML report
         run: |
           allure generate allure-results --clean -o allure-report-${{ matrix.browser }}
