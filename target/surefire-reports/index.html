@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-ParallelTestSuite" class="navigator-link">
-              <span class="suite-name border-skipped">ParallelTestSuite</span>
+              <span class="suite-name border-passed">ParallelTestSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,  1 skipped,  2 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-ParallelTestSuite" class="hide-methods skipped suite-ParallelTestSuite"> (hide)</a> <!-- hide-methods skipped suite-ParallelTestSuite -->
-                      <a href="#" panel-name="suite-ParallelTestSuite" class="show-methods skipped suite-ParallelTestSuite"> (show)</a> <!-- show-methods skipped suite-ParallelTestSuite -->
-                    </span>
-                    <div class="method-list-content skipped suite-ParallelTestSuite">
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-ParallelTestSuite" title="tests.OrangeHRMTest" class="method navigator-link" hash-for-method="testSearchInAdminPage">testSearchInAdminPage</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content skipped suite-ParallelTestSuite -->
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -125,6 +111,11 @@
                         <a href="#" panel-name="suite-ParallelTestSuite" title="tests.LaunchTest" class="method navigator-link" hash-for-method="openGoogle">openGoogle</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ParallelTestSuite" title="tests.OrangeHRMTest" class="method navigator-link" hash-for-method="testSearchInAdminPage">testSearchInAdminPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                     </div> <!-- method-list-content passed suite-ParallelTestSuite -->
                   </li>
                 </ul>
@@ -137,31 +128,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-ParallelTestSuite" class="panel ParallelTestSuite">
-          <div class="suite-ParallelTestSuite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">tests.OrangeHRMTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testSearchInAdminPage">
-                  </a> <!-- testSearchInAdminPage -->
-                  <span class="method-name">testSearchInAdminPage</span>
-                  <div class="stack-trace">java.lang.RuntimeException: Failed to create WebDriver: Cloud credentials not found! Ensure environment variables are set.
-	at utils.WebDriverFactory.createDriver(WebDriverFactory.java:69)
-	at tests.OrangeHRMTest.setUp(OrangeHRMTest.java:20)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1570)
-... Removed 15 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-ParallelTestSuite-class-skipped -->
           <div class="suite-ParallelTestSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -190,6 +156,21 @@
                   <span class="method-name">openAmazonAndClickItem</span>
                   <em>
 (Open Amazon, search a product, click first item)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ParallelTestSuite-class-passed -->
+          <div class="suite-ParallelTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.OrangeHRMTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSearchInAdminPage">
+                  </a> <!-- testSearchInAdminPage -->
+                  <span class="method-name">testSearchInAdminPage</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -252,20 +233,20 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'openAmazonAndClickItem')
 data.setCell(0, 2, 'tests.AmazonTest')
-data.setCell(0, 3, 69955);
+data.setCell(0, 3, 28541);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'openGoogle')
-data.setCell(1, 2, 'tests.LaunchTest')
-data.setCell(1, 3, 5261);
+data.setCell(1, 1, 'testSearchInAdminPage')
+data.setCell(1, 2, 'tests.OrangeHRMTest')
+data.setCell(1, 3, 18303);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testSearchInAdminPage')
-data.setCell(2, 2, 'tests.OrangeHRMTest')
-data.setCell(2, 3, 0);
+data.setCell(2, 1, 'openGoogle')
+data.setCell(2, 2, 'tests.LaunchTest')
+data.setCell(2, 3, 9971);
 window.suiteTableData['ParallelTestSuite']= { tableData: data, tableDiv: 'times-div-ParallelTestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 56 seconds</span>
               <div id="times-div-ParallelTestSuite">
               </div> <!-- times-div-ParallelTestSuite -->
             </div> <!-- times-div -->
@@ -300,8 +281,6 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">tests.OrangeHRMTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
@@ -310,29 +289,35 @@ return data;
               <div class="chronological-class-name">tests.LaunchTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">openGoogle</span>
-                <span class="method-start">4 ms</span>
+                <span class="method-start">3 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.OrangeHRMTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testSearchInAdminPage</span>
-                <span class="method-start">188 ms</span>
+                <span class="method-start">3796 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">196 ms</span>
-              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.AmazonTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">openAmazonAndClickItem</span>
-                <span class="method-start">2884 ms</span>
+                <span class="method-start">3827 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.OrangeHRMTest</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">72844 ms</span>
+                <span class="method-start">22106 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.AmazonTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">32373 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

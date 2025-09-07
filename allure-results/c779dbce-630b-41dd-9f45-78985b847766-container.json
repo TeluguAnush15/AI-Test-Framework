@@ -1,0 +1,1 @@
+{"uuid":"c779dbce-630b-41dd-9f45-78985b847766","name":"tests.OrangeHRMTest.setUp","children":["b1588602-d23e-487d-bfcd-ea98348b792d"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1757248816847,"stop":1757248820459}],"afters":[],"start":1757248816846,"stop":1757248820459}

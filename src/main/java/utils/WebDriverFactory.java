@@ -57,6 +57,8 @@ public class WebDriverFactory {
 
                 // Initialize RemoteWebDriver for BrowserStack (or other cloud service)
                 driver.set(new RemoteWebDriver(new URL(hubURL), options));
+                System.out.println("BROWSERSTACK_USERNAME: " + System.getenv("BROWSERSTACK_USERNAME"));
+                System.out.println("BROWSERSTACK_ACCESS_KEY: " + System.getenv("BROWSERSTACK_ACCESS_KEY"));
                 System.out.println(">>> Running on cloud (BrowserStack or other cloud service)");
 
             } else {

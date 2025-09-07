@@ -22,10 +22,10 @@
 <suite name="ParallelTestSuite" parallel="classes" thread-count="3">
   <test name="ShoppingFlowTest">
     <classes>
-      
+      <class name="tests.AmazonTest"/>
       <class name="tests.LaunchTest"/>
       <class name="tests.OrangeHRMTest"/>
-       <class name="tests.AmazonTest"/>
+       
     </classes>
   </test>
   </suite>
