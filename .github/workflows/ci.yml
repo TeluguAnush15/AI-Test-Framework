@@ -21,14 +21,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up JDK 17
+      - name: Set up JDK
         uses: actions/setup-java@v3
         with:
-          distribution: temurin
           java-version: '17'
 
-      - name: Run tests on ${ { matrix.browser } }
-        run: mvn clean test -DsuiteXmlFile=testng.xml -Dbrowser=${{ matrix.browser }}
+      - name: Run tests
+        run: |
+          echo "Running on cloud..."
+          mvn clean test -Denv=cloud -DBROWSERSTACK_USERNAME=${{ secrets.BROWSERSTACK_USERNAME }}
 
       - name: Install Allure CLI
         run: |
