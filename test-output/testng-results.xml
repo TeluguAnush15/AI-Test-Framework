@@ -2,40 +2,40 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-07T17:57:31 IST" name="ParallelTestSuite" finished-at="2025-09-07T17:58:16 IST" duration-ms="45240">
+  <suite started-at="2025-09-07T19:32:06 IST" name="ParallelTestSuite" finished-at="2025-09-07T19:32:25 IST" duration-ms="18014">
     <groups>
     </groups>
-    <test started-at="2025-09-07T17:57:31 IST" name="ShoppingFlowTest" finished-at="2025-09-07T17:58:16 IST" duration-ms="45240">
+    <test started-at="2025-09-07T19:32:06 IST" name="ShoppingFlowTest" finished-at="2025-09-07T19:32:25 IST" duration-ms="18014">
       <class name="tests.AmazonTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AmazonTest@dc9876b]" started-at="2025-09-07T17:57:31 IST" name="setUp" finished-at="2025-09-07T17:57:34 IST" duration-ms="3104" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AmazonTest@2c78324b]" started-at="2025-09-07T19:32:07 IST" name="setUp" finished-at="2025-09-07T19:32:10 IST" duration-ms="3026" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="openAmazonAndClickItem()[pri:0, instance:tests.AmazonTest@dc9876b]" started-at="2025-09-07T17:57:35 IST" name="openAmazonAndClickItem" description="Open Amazon, search a product, click first item" finished-at="2025-09-07T17:58:16 IST" duration-ms="41199" status="PASS">
+        <test-method signature="openAmazonAndClickItem()[pri:0, instance:tests.AmazonTest@2c78324b]" started-at="2025-09-07T19:32:10 IST" name="openAmazonAndClickItem" description="Open Amazon, search a product, click first item" finished-at="2025-09-07T19:32:24 IST" duration-ms="14499" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openAmazonAndClickItem -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AmazonTest@dc9876b]" started-at="2025-09-07T17:58:16 IST" name="tearDown" finished-at="2025-09-07T17:58:16 IST" duration-ms="714" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AmazonTest@2c78324b]" started-at="2025-09-07T19:32:24 IST" name="tearDown" finished-at="2025-09-07T19:32:25 IST" duration-ms="229" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.AmazonTest -->
       <class name="tests.LaunchTest">
-        <test-method signature="openGoogle()[pri:0, instance:tests.LaunchTest@4b86805d]" started-at="2025-09-07T17:57:31 IST" name="openGoogle" finished-at="2025-09-07T17:57:48 IST" duration-ms="17194" status="PASS">
+        <test-method signature="openGoogle()[pri:0, instance:tests.LaunchTest@471a9022]" started-at="2025-09-07T19:32:07 IST" name="openGoogle" finished-at="2025-09-07T19:32:14 IST" duration-ms="7199" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openGoogle -->
       </class> <!-- tests.LaunchTest -->
       <class name="tests.OrangeHRMTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.OrangeHRMTest@7d61eb55]" started-at="2025-09-07T17:57:31 IST" name="setUp" finished-at="2025-09-07T17:57:34 IST" duration-ms="2917" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.OrangeHRMTest@dc9876b]" started-at="2025-09-07T19:32:07 IST" name="setUp" finished-at="2025-09-07T19:32:12 IST" duration-ms="5160" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testSearchInAdminPage()[pri:0, instance:tests.OrangeHRMTest@7d61eb55]" started-at="2025-09-07T17:57:35 IST" name="testSearchInAdminPage" finished-at="2025-09-07T17:57:49 IST" duration-ms="14321" status="PASS">
+        <test-method signature="testSearchInAdminPage()[pri:0, instance:tests.OrangeHRMTest@dc9876b]" started-at="2025-09-07T19:32:12 IST" name="testSearchInAdminPage" finished-at="2025-09-07T19:32:22 IST" duration-ms="9947" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSearchInAdminPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.OrangeHRMTest@7d61eb55]" started-at="2025-09-07T17:57:49 IST" name="tearDown" finished-at="2025-09-07T17:57:50 IST" duration-ms="926" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.OrangeHRMTest@dc9876b]" started-at="2025-09-07T19:32:22 IST" name="tearDown" finished-at="2025-09-07T19:32:22 IST" duration-ms="257" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

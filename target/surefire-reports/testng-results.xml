@@ -1,17 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-07T18:43:16 IST" name="Surefire suite" finished-at="2025-09-07T18:43:16 IST" duration-ms="142">
+  <suite started-at="2025-09-07T19:33:08 IST" name="ParallelTestSuite" finished-at="2025-09-07T19:33:42 IST" duration-ms="34283">
     <groups>
     </groups>
-    <test started-at="2025-09-07T18:43:16 IST" name="Surefire test" finished-at="2025-09-07T18:43:16 IST" duration-ms="142">
-      <class name="AutomationProject.SampleTest">
-        <test-method signature="testLogin()[pri:0, instance:AutomationProject.SampleTest@5d7148e2]" started-at="2025-09-07T18:43:16 IST" name="testLogin" finished-at="2025-09-07T18:43:16 IST" duration-ms="54" status="PASS">
+    <test started-at="2025-09-07T19:33:08 IST" name="ShoppingFlowTest" finished-at="2025-09-07T19:33:42 IST" duration-ms="34283">
+      <class name="tests.AmazonTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AmazonTest@402c4085]" started-at="2025-09-07T19:33:08 IST" name="setUp" finished-at="2025-09-07T19:33:10 IST" duration-ms="2236" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLogin -->
-      </class> <!-- AutomationProject.SampleTest -->
-    </test> <!-- Surefire test -->
-  </suite> <!-- Surefire suite -->
+        </test-method> <!-- setUp -->
+        <test-method signature="openAmazonAndClickItem()[pri:0, instance:tests.AmazonTest@402c4085]" started-at="2025-09-07T19:33:10 IST" name="openAmazonAndClickItem" description="Open Amazon, search a product, click first item" finished-at="2025-09-07T19:33:42 IST" duration-ms="31805" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openAmazonAndClickItem -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AmazonTest@402c4085]" started-at="2025-09-07T19:33:42 IST" name="tearDown" finished-at="2025-09-07T19:33:42 IST" duration-ms="197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.AmazonTest -->
+      <class name="tests.LaunchTest">
+        <test-method signature="openGoogle()[pri:0, instance:tests.LaunchTest@72bc6553]" started-at="2025-09-07T19:33:08 IST" name="openGoogle" finished-at="2025-09-07T19:33:12 IST" duration-ms="3803" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openGoogle -->
+      </class> <!-- tests.LaunchTest -->
+      <class name="tests.OrangeHRMTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.OrangeHRMTest@66982506]" started-at="2025-09-07T19:33:08 IST" name="setUp" finished-at="2025-09-07T19:33:08 IST" duration-ms="19" status="FAIL">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Failed to create WebDriver: Cloud credentials not found! Set them as environment variables or system properties.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Failed to create WebDriver: Cloud credentials not found! Set them as environment variables or system properties.
+at utils.WebDriverFactory.createDriver(WebDriverFactory.java:82)
+at tests.OrangeHRMTest.setUp(OrangeHRMTest.java:20)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: java.lang.RuntimeException: Cloud credentials not found! Set them as environment variables or system properties.
+at utils.WebDriverFactory.createDriver(WebDriverFactory.java:62)
+... 21 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testSearchInAdminPage()[pri:0, instance:tests.OrangeHRMTest@66982506]" started-at="2025-09-07T19:33:08 IST" name="testSearchInAdminPage" finished-at="2025-09-07T19:33:08 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Failed to create WebDriver: Cloud credentials not found! Set them as environment variables or system properties.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Failed to create WebDriver: Cloud credentials not found! Set them as environment variables or system properties.
+at utils.WebDriverFactory.createDriver(WebDriverFactory.java:82)
+at tests.OrangeHRMTest.setUp(OrangeHRMTest.java:20)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: java.lang.RuntimeException: Cloud credentials not found! Set them as environment variables or system properties.
+at utils.WebDriverFactory.createDriver(WebDriverFactory.java:62)
+... 21 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchInAdminPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.OrangeHRMTest@66982506]" started-at="2025-09-07T19:33:08 IST" name="tearDown" finished-at="2025-09-07T19:33:08 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.OrangeHRMTest -->
+    </test> <!-- ShoppingFlowTest -->
+  </suite> <!-- ParallelTestSuite -->
 </testng-results>

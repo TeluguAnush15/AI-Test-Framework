@@ -131,6 +131,21 @@
           <div class="suite-ParallelTestSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">tests.OrangeHRMTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSearchInAdminPage">
+                  </a> <!-- testSearchInAdminPage -->
+                  <span class="method-name">testSearchInAdminPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ParallelTestSuite-class-passed -->
+          <div class="suite-ParallelTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">tests.AmazonTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -160,21 +175,6 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-ParallelTestSuite-class-passed -->
-          <div class="suite-ParallelTestSuite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.OrangeHRMTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testSearchInAdminPage">
-                  </a> <!-- testSearchInAdminPage -->
-                  <span class="method-name">testSearchInAdminPage</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-ParallelTestSuite-class-passed -->
         </div> <!-- panel ParallelTestSuite -->
         <div panel-name="test-xml-ParallelTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -187,9 +187,9 @@
 &lt;suite thread-count=&quot;3&quot; parallel=&quot;classes&quot; name=&quot;ParallelTestSuite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;3&quot; parallel=&quot;classes&quot; name=&quot;ShoppingFlowTest&quot;&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;tests.AmazonTest&quot;/&gt;
       &lt;class name=&quot;tests.LaunchTest&quot;/&gt;
       &lt;class name=&quot;tests.OrangeHRMTest&quot;/&gt;
-      &lt;class name=&quot;tests.AmazonTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- ShoppingFlowTest --&gt;
 &lt;/suite&gt; &lt;!-- ParallelTestSuite --&gt;
@@ -233,20 +233,20 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'openAmazonAndClickItem')
 data.setCell(0, 2, 'tests.AmazonTest')
-data.setCell(0, 3, 41199);
+data.setCell(0, 3, 14499);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'openGoogle')
-data.setCell(1, 2, 'tests.LaunchTest')
-data.setCell(1, 3, 17194);
+data.setCell(1, 1, 'testSearchInAdminPage')
+data.setCell(1, 2, 'tests.OrangeHRMTest')
+data.setCell(1, 3, 9947);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testSearchInAdminPage')
-data.setCell(2, 2, 'tests.OrangeHRMTest')
-data.setCell(2, 3, 14321);
+data.setCell(2, 1, 'openGoogle')
+data.setCell(2, 2, 'tests.LaunchTest')
+data.setCell(2, 3, 7199);
 window.suiteTableData['ParallelTestSuite']= { tableData: data, tableDiv: 'times-div-ParallelTestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 31 seconds</span>
               <div id="times-div-ParallelTestSuite">
               </div> <!-- times-div-ParallelTestSuite -->
             </div> <!-- times-div -->
@@ -289,32 +289,32 @@ return data;
               <div class="chronological-class-name">tests.LaunchTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">openGoogle</span>
-                <span class="method-start">2 ms</span>
+                <span class="method-start">1 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.AmazonTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">openAmazonAndClickItem</span>
-                <span class="method-start">3225 ms</span>
+                <span class="method-start">3239 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.OrangeHRMTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testSearchInAdminPage</span>
-                <span class="method-start">3225 ms</span>
+                <span class="method-start">5167 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">17592 ms</span>
+                <span class="method-start">15126 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.AmazonTest</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">44432 ms</span>
+                <span class="method-start">17745 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
