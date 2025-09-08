@@ -39,6 +39,10 @@ jobs:
           else
             sudo apt-get install -y firefox
           fi
+
+      - name: Clean previous Allure results
+        run: |
+         rm -rf target/allure-results-${{ matrix.browser }}
           
       - name: Run tests (matrix)
         env:
