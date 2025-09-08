@@ -42,11 +42,16 @@ jobs:
           
       - name: Run tests (matrix)
         env:
-          ALLURE_RESULTS_DIR: target/allure-results-${{ matrix.browser }}
+         ALLURE_RESULTS_DIR: target/allure-results-${{ matrix.browser }}
         run: |
-          echo "Running tests on browser=${{ matrix.browser }}"
-          mvn -B -DskipTests=false -Dbrowser=${{ matrix.browser }} -Dallure.results.directory=${ALLURE_RESULTS_DIR} test
-
+         echo "Running tests on browser=${{ matrix.browser }}"
+         mvn -B -DskipTests=false -Dbrowser=${{ matrix.browser }} -Dallure.results.directory=${ALLURE_RESULTS_DIR} test
+         TEST_RESULT=$?
+         if [ $TEST_RESULT -ne 0 ]; then
+          echo "Tests failed on browser=${{ matrix.browser }}. Failing the job."
+          exit 1
+         fi
+    
       - name: Install Allure CLI
         run: |
           wget https://github.com/allure-framework/allure2/releases/download/2.27.0/allure-2.27.0.tgz
@@ -59,7 +64,7 @@ jobs:
         run: |
           allure generate allure-results --clean -o allure-report-${{ matrix.browser }}
 
-      - name: Upload Allure report as artifact for ${ { matrix.browser } }
+      - name: Upload Allure report as artifact for ${{ matrix.browser }}
         uses: actions/upload-artifact@v4
         with:
           name: allure-report-${{ matrix.browser }}
