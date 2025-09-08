@@ -38,6 +38,7 @@ public class AmazonTest {
         WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox"));
         searchBox.sendKeys("mobile");
         driver.findElement(By.id("nav-search-submit-button")).click();
+        System.out.println("Triggering CI/CD test run...");
 
        
     }
